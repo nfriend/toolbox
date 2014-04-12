@@ -1,4 +1,4 @@
-// attache to appropriate angular module
+// attach to appropriate angular module
 
 .directive('dragZoom', function () {
     return {
