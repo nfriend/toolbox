@@ -119,7 +119,7 @@
 
                     scope.$apply(function () {
                         gridPosition.left = parseFloat(elem.css('left'));
-                        gridPosition.top = parseFloat(elem.css('left'));
+                        gridPosition.top = parseFloat(elem.css('top'));
                     });
                 },
                 stop: function (e) {
@@ -129,7 +129,7 @@
 
                     // calculate the final points of the element, with inertia
                     var newLeft = parseFloat(elem.css('left')) + velocity.x * 20;
-                    var newTop = parseFloat(elem.css('left')) + velocity.y * 20;
+                    var newTop = parseFloat(elem.css('top')) + velocity.y * 20;
 
                     // ensure that the end position of the element is never beyond its parent's bounds
                     newLeft = newLeft < -1 * elemWidth + elem.parent().width() ? -1 * elemWidth + elem.parent().width() : newLeft;
