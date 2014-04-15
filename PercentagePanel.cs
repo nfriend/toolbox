@@ -6,14 +6,14 @@ namespace Toolbox
 {
     public class PercentagePanel : Panel
     {
-        public static readonly DependencyProperty PositioningModeProperty = DependencyProperty.Register("PositioningMode", typeof(PositioningMode), typeof(PercentagePanel), new FrameworkPropertyMetadata(PositioningMode.Center, FrameworkPropertyMetadataOptions.AffectsRender));
+        public static readonly DependencyProperty PositioningModeProperty = DependencyProperty.Register("PositioningMode", typeof(PositioningMode), typeof(PercentagePanel), new FrameworkPropertyMetadata(PositioningMode.Center, FrameworkPropertyMetadataOptions.AffectsParentArrange));
         public PositioningMode PositioningMode
         {
             get { return (PositioningMode)GetValue(PositioningModeProperty); }
             set { SetValue(PositioningModeProperty, value); }
         }
 
-        public static readonly DependencyProperty LeftProperty = DependencyProperty.RegisterAttached("Left", typeof(Double), typeof(PercentagePanel), new FrameworkPropertyMetadata(double.MaxValue, FrameworkPropertyMetadataOptions.AffectsRender));
+        public static readonly DependencyProperty LeftProperty = DependencyProperty.RegisterAttached("Left", typeof(Double), typeof(PercentagePanel), new FrameworkPropertyMetadata(double.MaxValue, FrameworkPropertyMetadataOptions.AffectsParentArrange));
         public static void SetLeft(UIElement element, Double value)
         {
             element.SetValue(LeftProperty, value);
@@ -23,7 +23,7 @@ namespace Toolbox
             return (Double)element.GetValue(LeftProperty);
         }
 
-        public static readonly DependencyProperty RightProperty = DependencyProperty.RegisterAttached("Right", typeof(Double), typeof(PercentagePanel), new FrameworkPropertyMetadata(double.MaxValue, FrameworkPropertyMetadataOptions.AffectsRender));
+        public static readonly DependencyProperty RightProperty = DependencyProperty.RegisterAttached("Right", typeof(Double), typeof(PercentagePanel), new FrameworkPropertyMetadata(double.MaxValue, FrameworkPropertyMetadataOptions.AffectsParentArrange));
         public static void SetRight(UIElement element, Double value)
         {
             element.SetValue(RightProperty, value);
@@ -33,7 +33,7 @@ namespace Toolbox
             return (Double)element.GetValue(RightProperty);
         }
 
-        public static readonly DependencyProperty TopProperty = DependencyProperty.RegisterAttached("Top", typeof(Double), typeof(PercentagePanel), new FrameworkPropertyMetadata(double.MaxValue, FrameworkPropertyMetadataOptions.AffectsRender));
+        public static readonly DependencyProperty TopProperty = DependencyProperty.RegisterAttached("Top", typeof(Double), typeof(PercentagePanel), new FrameworkPropertyMetadata(double.MaxValue, FrameworkPropertyMetadataOptions.AffectsParentArrange));
         public static void SetTop(UIElement element, Double value)
         {
             element.SetValue(TopProperty, value);
@@ -43,7 +43,7 @@ namespace Toolbox
             return (Double)element.GetValue(TopProperty);
         }
 
-        public static readonly DependencyProperty BottomProperty = DependencyProperty.RegisterAttached("Bottom", typeof(Double), typeof(PercentagePanel), new FrameworkPropertyMetadata(double.MaxValue, FrameworkPropertyMetadataOptions.AffectsRender));
+        public static readonly DependencyProperty BottomProperty = DependencyProperty.RegisterAttached("Bottom", typeof(Double), typeof(PercentagePanel), new FrameworkPropertyMetadata(double.MaxValue, FrameworkPropertyMetadataOptions.AffectsParentArrange));
         public static void SetBottom(UIElement element, Double value)
         {
             element.SetValue(BottomProperty, value);
