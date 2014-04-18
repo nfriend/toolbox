@@ -9,27 +9,35 @@
         width: 100%;
         height: 90%;
         padding-left: 10%;
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
 
         .padding-container {
-            width: 100%;
+            width: 90%;
             height: 100%;
             box-sizing: content-box;
+            position: absolute;
 
             .drag-zoom-content {
                 width: 100%;
+                height: 100%;
                 min-height: 100%;
                 max-width: none;
                 padding: 200px;
                 box-sizing: content-box;
 
-                > *:first-child {
+                .another-stupid-container {
+                    position: relative;
                     width: 100%;
                     height: 100%;
+
+                    > * {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                    }
                 }
             }
         }
-
-
     }
 }

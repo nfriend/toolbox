@@ -1,14 +1,15 @@
 'use strict';
 
-angular.module('yourModuleNameHere')
+angular.module('yourModuleNameHere.services')
     .factory('dragZoomSynchronizer', function () {
         var dragZoomSynchronizerInstance = {
-            zoom: 1
+            widthZoom: 0,
+            heightZoom: 0
         }
 
         var elementsToSync = {
-            left: null,
-            top: null,
+            scrollLeft: null,
+            scrollTop: null,
             width: null,
             height: null
         }
