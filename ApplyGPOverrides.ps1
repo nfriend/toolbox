@@ -1,7 +1,7 @@
 # This file resets some of the more annoying settings enforced by Group Policy
 # Run this file as administrator.
 
-# This funciton detects if a registry value exists
+# This function detects if a registry value exists
 # from https://stackoverflow.com/a/5652674/1063392
 Function Test-RegistryValue {
     param(
